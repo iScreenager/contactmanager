@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# Contact Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This guide provides steps to install and run the Contact Manager application built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensure you have the following installed on your system:
 
-## React Compiler
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation
 
-## Expanding the ESLint configuration
+1. Clone the repository:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/iScreenager/contactmanager.git
+cd contactmanager
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+or
+
+```bash
+yarn install
+```
+
+## Running the Application
+
+1. Start the development server:
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+yarn dev
+```
+
+2. Open your browser and navigate to the URL displayed in the terminal (e.g., `http://localhost:5173`).
+
+## Building for Production
+
+To create a production build, run:
+
+```bash
+npm run build
+```
+
+or
+
+```bash
+yarn build
+```
+
+The build artifacts will be available in the `dist` folder.
+
+## Pending Items From Bonus
+
+These three things are pending from bonus items:
+
+- Animations/transitions for modal open/close and list actions
+- Toast notifications for success or error (e.g., on add/delete)
+- Persist contacts using localStorage
+
+## Screenshots
+
+Here are some screenshots of the application:
+
+![Home Page](./screenshots/1.png)
+
+![Add Contact](./screenshots/2.png)
+
+![Contact List](./screenshots/3.png)
+
+![Edit Contact](./screenshots/4.png)
+
+![Delete Confirmation](./screenshots/5.png)
+
+![Search Contacts](./screenshots/6.png)
+
+![](./screenshots/7.png)
